@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What is the main goal of the paper 'Efficient Estimation of Word Representations in Vector Space'?",
+    "answer": "The main goal of the paper is to introduce two novel model architectures, namely Continuous Bag-of-Words (CBOW) and Skip-Gram, that allow for efficient training of high-quality word vectors on very large datasets with billions of words and millions of vocabulary entries. The paper aims to reduce computational complexity while achieving competitive accuracy compared to more complex neural network language models."
+  },
+  {
+    "question": "What are the two architectures proposed in this paper?",
+    "answer": "The two architectures proposed are the Continuous Bag-of-Words (CBOW) model and the Skip-Gram model. CBOW predicts a word based on its context, using surrounding words as input, while the Skip-Gram model does the reverse—it uses the center word to predict surrounding context words. Both are shallow neural networks designed to efficiently learn distributed word representations."
+  },
+  {
+    "question": "What is the semantic-syntactic test set used for evaluation in this paper?",
+    "answer": "The semantic-syntactic test set is a comprehensive benchmark consisting of approximately 19,000 analogy-style questions divided into semantic and syntactic categories. Examples include 'Paris is to France as Tokyo is to ?', and 'run is to running as swim is to ?'. The test evaluates whether vector arithmetic on learned word embeddings can correctly predict the analogous word using cosine similarity."
+  },
+  {
+    "question": "How is vector arithmetic used in the context of word analogies?",
+    "answer": "Vector arithmetic is used to capture word relationships by performing operations like vector('King') - vector('Man') + vector('Woman') ≈ vector('Queen'). The model computes a target vector based on this algebra and retrieves the word whose vector is closest by cosine similarity. This technique demonstrates how semantic and syntactic relationships are encoded in the learned embedding space."
+  },
+  {
+    "question": "How does the Skip-Gram model differ from the CBOW model?",
+    "answer": "The Skip-Gram model differs from CBOW in its training objective. Skip-Gram aims to predict multiple context words given a single center word, effectively learning word representations that are good at capturing surrounding context. In contrast, CBOW predicts the center word by averaging the embeddings of surrounding context words. Skip-Gram generally performs better on capturing rare word semantics, while CBOW is faster to train."
+  },
+  {
+    "question": "Why is removing hidden layers in these models advantageous?",
+    "answer": "Removing the non-linear hidden layers significantly reduces computational complexity, making the models more scalable for very large corpora. This simplification enables the training of embeddings on datasets with billions of tokens, something that was not feasible with previous deeper neural architectures. Despite their simplicity, these models retain the ability to learn rich semantic relationships."
+  },
+  {
+    "question": "What is the Transformer architecture proposed in the paper 'Attention Is All You Need'?",
+    "answer": "The Transformer is a novel neural network architecture that relies entirely on self-attention mechanisms to model dependencies in sequential data. Unlike prior models that use recurrent (RNNs) or convolutional layers, the Transformer uses stacked layers of multi-head self-attention and feed-forward networks for both encoding and decoding. This design enables greater parallelization and more efficient learning of long-range dependencies."
+  },
+  {
+    "question": "What is Multi-Head Attention and why is it useful?",
+    "answer": "Multi-Head Attention is a mechanism where multiple attention operations are performed in parallel, each focusing on different representation subspaces of the input. The outputs are then concatenated and linearly transformed. This allows the model to jointly attend to information from different positions and aspects of the sequence, enabling richer representations and better performance on complex language tasks."
+  },
+  {
+    "question": "What kind of positional encoding is used in the Transformer model?",
+    "answer": "The Transformer uses sinusoidal positional encodings added to input embeddings to capture the order of tokens in a sequence. These encodings are based on sine and cosine functions of different frequencies, allowing the model to infer token positions and relative distances. This method is fixed (non-learned) and helps the model distinguish positions without recurrence or convolutions."
+  },
+  {
+    "question": "What advantages does self-attention have over recurrent layers in sequence modeling?",
+    "answer": "Self-attention provides several advantages over recurrent layers: it allows parallel computation over sequence elements, has a constant path length between any two positions (enabling better gradient flow and long-range dependency modeling), and requires fewer sequential operations. This makes training faster and more scalable, especially for tasks involving long sequences such as translation or summarization."
+  },
+  {
+    "question": "What datasets were used to evaluate the Transformer model?",
+    "answer": "The Transformer model was evaluated on the WMT 2014 English-to-German and English-to-French machine translation tasks. These datasets consist of millions of parallel sentence pairs. The Transformer achieved BLEU scores of 28.4 for English-to-German and 41.8 for English-to-French, surpassing previous state-of-the-art results, including models using RNNs and convolutional layers."
+  },
+  {
+    "question": "What optimizer and learning rate schedule was used to train the Transformer?",
+    "answer": "The Transformer was trained using the Adam optimizer with parameters β1=0.9, β2=0.98, and ε=10^-9. The learning rate was adjusted dynamically using a schedule that increases linearly during a warm-up phase, followed by a decay proportional to the inverse square root of the training step. This schedule stabilizes early training and improves convergence."
+  }
+]

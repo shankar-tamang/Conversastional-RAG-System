@@ -1,0 +1,31 @@
+{
+  "fixed_size": {
+    "Accuracy": "83.33%",
+    "Recall": "83.33%",
+    "Average Latency (s)": "1.9391",
+    "Total Questions": 12,
+    "Correctly Answered": 10
+  },
+  "sentence_split": {
+    "Accuracy": "50.00%",
+    "Recall": "50.00%",
+    "Average Latency (s)": "1.3330",
+    "Total Questions": 12,
+    "Correctly Answered": 6
+  },
+  "fixed_size_similarity": {
+    "Accuracy": "75.00%",
+    "Recall": "75.00%",
+    "Average Latency (s)": "0.4081",
+    "Total Questions": 12,
+    "Correctly Answered": 9
+  },
+  "sentence_split_similarity": {
+    "Accuracy": "33.33%",
+    "Recall": "33.33%",
+    "Average Latency (s)": "0.4175",
+    "Total Questions": 12,
+    "Correctly Answered": 4
+  }
+}
+
