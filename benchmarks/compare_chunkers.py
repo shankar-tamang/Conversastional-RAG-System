@@ -8,7 +8,7 @@ import tempfile
 from uuid import uuid4
 
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
+from sklearn.metrics.pairwise import cosine_similarity
 
 from langchain_community.document_loaders import PyPDFLoader
 
@@ -130,7 +130,7 @@ def run_benchmark():
 
             Embeddings = embedding_model.embed_documents([ground_truth_answer, retrieved_texts])
 
-            similarities = linear_kernel([Embeddings[0]], [Embeddings[1]])[0]
+            similarities = cosine_similarity([Embeddings[0]], [Embeddings[1]])[0]
             max_similarity = np.max(similarities)
             logging.info(f"Highest similarity score: {max_similarity:.4f}")
             
