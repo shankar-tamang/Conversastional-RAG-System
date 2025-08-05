@@ -100,8 +100,24 @@ The `benchmarks/` directory contains two key scripts for evaluation:
 
 ## Running the Application
 
-1.  **Start the Redis Server:**
-    Ensure Redis is installed and running. If not, you can start it with:
+1.  **Install and Start Redis:**
+    This project requires a Redis server for session management. If you don't have it installed, follow the instructions for your operating system:
+
+    *   **For Debian/Ubuntu:**
+        ```bash
+        sudo apt-get update
+        sudo apt-get install redis-server
+        ```
+    *   **For macOS (using Homebrew):**
+        ```bash
+        brew install redis
+        ```
+    *   **Using Docker:**
+        ```bash
+        docker run -d -p 6379:6379 redis
+        ```
+
+    Once installed, you can start the Redis server:
     ```bash
     redis-server &
     ```
